@@ -524,7 +524,7 @@ document.write('<font size="2" face="Arial"><B>' + Hours + ":" + Mins + Time + '
     <td colspan="10">&nbsp;</td>
     <td width="1"><img src="./index_files/shim.gif" width="1" height="11" border="0" name="undefined_2_2"></td>
   </tr>
-  <tr valign="top"><!-- row 26 --> 1
+  <tr valign="top"><!-- row 26 --> 
     <td colspan="10">
       <div align="center"><a href="http://www.bancolombia.com.co/webpages.nsf/pages/TemaTarjetasDebito"><img src="./index_files/claveevolucion.gif" width="413" height="55" border="0" alt="Tarjetas Débito"></a></div>
     </td>
