@@ -1,45 +1,30 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="windows-1252">
-  <title>Sucursal Virtual BANCOLOMBIA</title>
-</head>
-<body bgcolor="#ffffff">
-  <table border="0" cellpadding="0" cellspacing="0" width="675">
-    <tr valign="top">
-      <!-- Celda con fecha y hora actualizadas -->
-      <td width="132"> 
-        <div id="fechaHora" style="font-family: Arial; font-size: 12pt; font-weight: bold;"></div>
+<td width="132"> 
+  <div id="fechaHora" style="font-family: Arial; font-size: 12pt; font-weight: bold;"></div>
 
-        <script>
-          function actualizarFechaHora() {
-            const ahora = new Date();
+  <script>
+    function actualizarFechaHora() {
+      const ahora = new Date();
 
-            const opcionesFecha = {
-              weekday: 'long',
-              day: '2-digit',
-              month: 'long',
-              year: 'numeric'
-            };
+      const opcionesFecha = {
+        weekday: 'long',
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+      };
 
-            const opcionesHora = {
-              hour: 'numeric',
-              minute: '2-digit',
-              hour12: true
-            };
+      const opcionesHora = {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      };
 
-            const fecha = ahora.toLocaleDateString('es-CO', opcionesFecha);
-            const hora = ahora.toLocaleTimeString('es-CO', opcionesHora);
+      const fecha = ahora.toLocaleDateString('es-CO', opcionesFecha);
+      const hora = ahora.toLocaleTimeString('es-CO', opcionesHora).replace(':', ':');
 
-            const fechaCapitalizada = fecha.charAt(0).toUpperCase() + fecha.slice(1);
-            document.getElementById('fechaHora').innerHTML = fechaCapitalizada + '<br>' + hora;
-          }
+      document.getElementById('fechaHora').innerHTML = fecha + '<br>' + hora;
+    }
 
-          actualizarFechaHora();
-          setInterval(actualizarFechaHora, 1000);
-        </script>
-      </td>
-    </tr>
-  </table>
-</body>
-</html>
+    actualizarFechaHora();
+    setInterval(actualizarFechaHora, 1000);
+  </script>
+</td>
